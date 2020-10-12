@@ -615,7 +615,7 @@ body{
 }
 
 
-presscontent.section {
+section.presscontent  {
   max-width: var(--sectionWidth);
   margin: 2% auto;
   width: 100%;
