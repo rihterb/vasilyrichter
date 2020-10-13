@@ -30,7 +30,7 @@
   justify-content: center;
   text-align: center;
   font-family: 'Lato', sans-serif;
-  margin: 0 auto;
+  margin: 0;
 	-webkit-animation: kenburns-right 60s ease-out both;
 	        animation: kenburns-right 60s ease-out both;
 
@@ -682,31 +682,129 @@ details[open] > summary {
   }
 }
 
+img {
+  vertical-align: middle;
+}
 
 #photos {
   /* Prevent vertical gaps */ 
   line-height: 0;
-  -webkit-column-count: 5;
-  -webkit-column-gap:   5px;
-  -moz-column-count:    5;
-  -moz-column-gap:      5px;
-  column-count:         5;
-  column-gap:           10px;  
-  margin: 2%;
-
+  -webkit-column-count: 4;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    4;
+  -moz-column-gap:      0px;
+  column-count:         4;
+  column-gap:           0px;  
+  margin: 10px;
 }
 
-.crop{
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 40%;
+  height: auto;
   overflow: hidden;
-  width: 100%;
 }
+
+/* Hide the images by default */
+.mySlides {
+  height: 63%;
+  width: auto;
+  overflow: hidden;
+  display: none;
+  position: relative;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+.prev{
+  left: 0;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  width: auto;
+  padding: 5px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  margin: auto;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  position: relative;
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  position: relative;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  position: relative;
+  float: left;
+  width: 16.66%;
+  overflow: hidden;
+  height: 4.5vw;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
 
 #photos img {
   /* Just in case there are inline attributes */
-  width: 100% !important;
+  width: 60% !important;
   height: auto !important;
   float: right;
-  clip-path: rect(0px,50px,100px,50px);
 }
 
 @media (max-width: 1200px) {
@@ -780,12 +878,3 @@ details[open] > summary {
             transform-origin: right;
   }
 }
-
-
-
-
-
-
-
-
-
