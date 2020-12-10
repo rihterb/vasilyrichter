@@ -27,7 +27,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   margin: 0;
 
   -webkit-animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -47,8 +47,8 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    font-family: 'Londrina Solid', cursive;
-
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    letter-spacing: 5px;
     
     -webkit-animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     animation: fade-in 2.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -76,6 +76,7 @@
   text-align: center;
   height: 80%;
   width: 60%;
+  color: #FFFFFF;
 }
 
 .main h1{
@@ -88,7 +89,7 @@
     color: white;
     -webkit-animation: vibrate-3 30s linear infinite alternate-reverse both;
     animation: vibrate-3 30s linear infinite alternate-reverse both;
-    text-shadow: 2px 2px 4px rgb(165, 165, 165);
+    text-shadow: -5px 5px 0px #ee2213, -10px 10px 0px #ca0f0f, -15px 15px 0px #9e0c0c;
 }
 .imain h2{
   margin-bottom: 5%;
@@ -96,7 +97,7 @@
   color: white;
   -webkit-animation: vibrate-3 30s linear infinite both;
   animation: vibrate-3 30s linear infinite both;
-  text-shadow: 2px 2px 4px rgb(165, 165, 165);
+  text-shadow: -5px 5px 0px #ee2213, -10px 10px 0px #ca0f0f, -15px 15px 0px #9e0c0c;
 }
 
 html {
@@ -129,17 +130,21 @@ a:link, a:visited, a:hover, a:active{
 .header{
     z-index: 4;
     height: 8.5vh;
-    /* font-weight: 100; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    letter-spacing: 4px;
     flex-direction: row;
     position: relative; 
+
     color: #dbe9ee;
     background-color: #11151c; 
-    /* background-image: url('../media/bg-header.jpg'); */
+}
+
+.header p{
+  font-size: 3.5vh;
 }
 
 .presscontent{
@@ -160,6 +165,24 @@ a:link, a:visited, a:hover, a:active{
   word-spacing: 3px;
   letter-spacing: 1px;
   /* text-shadow: 1px 1px 4px rgb(102, 102, 102); */
+}
+
+.video{
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 50%;
+  color: #FFFFFF;
+}
+
+.youtube{
+  height: 30vw;
+  width: 100%;
 }
  
 
@@ -200,7 +223,7 @@ h2.presscontent{
     flex-direction: column;
     position: relative; 
     color: rgb(255, 255, 255);
-    
+
 }
 
 .sc h1{
@@ -234,7 +257,7 @@ h2.presscontent{
 }
 
 .links h1{
-  font-size: 10vw;
+  font-size: 7vw;
   -webkit-animation: text-pop-up-top 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
 	animation: text-pop-up-top 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
 
@@ -781,7 +804,7 @@ img {
   float: left;
   width: 16.66%;
   overflow: hidden;
-  height: 4.5vw;
+  height: 100%;
 }
 
 /* Add a transparency effect for thumnbail images */
